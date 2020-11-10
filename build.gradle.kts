@@ -10,22 +10,26 @@ plugins {
 group = "one.oktw"
 version = "1.0-SNAPSHOT"
 
+val coroutinesVersion = "1.4.1"
+val bsonVersion = "4.1.1"
+
 repositories {
     mavenCentral()
     maven("https://kotlin.bintray.com/kotlinx")
 }
 
 dependencies {
-    implementation(kotlin("stdlib-jdk8"))
-    implementation(kotlin("reflect"))
-    implementation("org.jetbrains.kotlinx", "kotlinx-coroutines-jdk8", "1.4.1")
-    implementation("org.mongodb", "bson", "4.1.1")
+    api(kotlin("stdlib-jdk8"))
+    api(kotlin("reflect"))
+    api("org.jetbrains.kotlinx", "kotlinx-coroutines-jdk8", coroutinesVersion)
+    api("org.mongodb", "bson", bsonVersion)
 
-    shadow(kotlin("stdlib-jdk7"))
+//    shadow(kotlin("stdlib-jdk7"))
     shadow(kotlin("stdlib-jdk8"))
     shadow(kotlin("reflect"))
-    shadow("org.jetbrains.kotlinx", "kotlinx-coroutines-jdk8", "1.4.1")
-    shadow("org.mongodb", "bson", "4.1.1")
+//    shadow("org.jetbrains.kotlinx", "kotlinx-coroutines-core", coroutinesVersion)
+    shadow("org.jetbrains.kotlinx", "kotlinx-coroutines-jdk8", coroutinesVersion)
+    shadow("org.mongodb", "bson", bsonVersion)
 }
 
 tasks.withType<KotlinCompile> {
