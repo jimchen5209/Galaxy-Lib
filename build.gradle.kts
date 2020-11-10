@@ -38,8 +38,6 @@ tasks.withType<KotlinCompile> {
 
 val shadowJar by tasks.getting(ShadowJar::class) {
     archiveClassifier.set("all")
-    configurations = listOf(project.configurations.shadow.get())
-    exclude("META-INF")
 }
 
 val sourcesJar by tasks.register<Jar>("sourcesJar") {
