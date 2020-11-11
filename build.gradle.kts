@@ -21,14 +21,17 @@ repositories {
 dependencies {
     api(kotlin("stdlib-jdk8"))
     api(kotlin("reflect"))
+    api("org.jetbrains.kotlinx", "kotlinx-coroutines-core", coroutinesVersion)
     api("org.jetbrains.kotlinx", "kotlinx-coroutines-jdk8", coroutinesVersion)
+    api("org.jetbrains.kotlinx", "kotlinx-coroutines-reactive", coroutinesVersion)
     api("org.mongodb", "bson", bsonVersion)
 
 //    shadow(kotlin("stdlib-jdk7"))
     shadow(kotlin("stdlib-jdk8"))
     shadow(kotlin("reflect"))
-//    shadow("org.jetbrains.kotlinx", "kotlinx-coroutines-core", coroutinesVersion)
+    shadow("org.jetbrains.kotlinx", "kotlinx-coroutines-core", coroutinesVersion)
     shadow("org.jetbrains.kotlinx", "kotlinx-coroutines-jdk8", coroutinesVersion)
+    shadow("org.jetbrains.kotlinx", "kotlinx-coroutines-reactive", coroutinesVersion)
     shadow("org.mongodb", "bson", bsonVersion)
 }
 
