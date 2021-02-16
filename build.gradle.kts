@@ -3,7 +3,7 @@ import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 
 plugins {
     `maven-publish`
-    kotlin("jvm") version "1.4.21"
+    kotlin("jvm") version "1.4.30"
     id("com.github.johnrengelman.shadow") version "6.1.0"
 }
 
@@ -11,7 +11,7 @@ group = "one.oktw"
 version = "1.0-SNAPSHOT"
 
 val coroutinesVersion = "1.4.2"
-val bsonVersion = "4.1.1"
+val bsonVersion = "4.2.0"
 val log4jVersion = "2.8.1"
 val reactivestreamsVersion = "4.2.0"
 
