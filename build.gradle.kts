@@ -13,6 +13,7 @@ version = "1.0-SNAPSHOT"
 val coroutinesVersion = "1.4.2"
 val bsonVersion = "4.1.1"
 val log4jVersion = "2.8.1"
+val reactivestreamsVersion = "4.2.0"
 
 repositories {
     mavenCentral()
@@ -26,6 +27,7 @@ dependencies {
     api("org.jetbrains.kotlinx", "kotlinx-coroutines-jdk8", coroutinesVersion)
     api("org.jetbrains.kotlinx", "kotlinx-coroutines-reactive", coroutinesVersion)
     api("org.mongodb", "bson", bsonVersion)
+    api("org.mongodb", "mongodb-driver-reactivestreams", reactivestreamsVersion)
     api("org.apache.logging.log4j", "log4j-slf4j-impl", log4jVersion)
 
     shadow(kotlin("stdlib-jdk8"))
@@ -34,6 +36,7 @@ dependencies {
     shadow("org.jetbrains.kotlinx", "kotlinx-coroutines-jdk8", coroutinesVersion)
     shadow("org.jetbrains.kotlinx", "kotlinx-coroutines-reactive", coroutinesVersion)
     shadow("org.mongodb", "bson", bsonVersion)
+    shadow("org.mongodb", "mongodb-driver-reactivestreams", reactivestreamsVersion)
     shadow("org.apache.logging.log4j", "log4j-slf4j-impl", log4jVersion)
 }
 
