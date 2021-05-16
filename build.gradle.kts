@@ -3,17 +3,17 @@ import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 
 plugins {
     `maven-publish`
-    kotlin("jvm") version "1.4.32"
-    id("com.github.johnrengelman.shadow") version "6.1.0"
+    kotlin("jvm") version "1.5.0"
+    id("com.github.johnrengelman.shadow") version "7.0.0"
 }
 
 group = "one.oktw"
 version = "1.0-SNAPSHOT"
 
-val coroutinesVersion = "1.4.2"
-val bsonVersion = "4.2.0"
-val log4jVersion = "2.8.1"
-val reactivestreamsVersion = "4.2.0"
+val coroutinesVersion = "1.5.0"
+val bsonVersion = "4.2.3"
+val log4jVersion = "2.14.1"
+val reactivestreamsVersion = "4.2.3"
 
 repositories {
     mavenCentral()
@@ -41,7 +41,7 @@ dependencies {
 }
 
 tasks.withType<KotlinCompile> {
-    kotlinOptions.jvmTarget = "1.8"
+    kotlinOptions.jvmTarget = "16"
 }
 
 val shadowJar by tasks.getting(ShadowJar::class) {
@@ -66,5 +66,3 @@ publishing {
         }
     }
 }
-
-
