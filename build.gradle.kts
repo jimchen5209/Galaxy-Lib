@@ -29,6 +29,7 @@ dependencies {
     api("org.mongodb", "bson", bsonVersion)
     api("org.mongodb", "mongodb-driver-reactivestreams", reactivestreamsVersion)
     api("org.apache.logging.log4j", "log4j-slf4j-impl", log4jVersion)
+    api("org.apache.logging.log4j", "log4j-core", log4jVersion)
 
     shadow(kotlin("stdlib-jdk8"))
     shadow(kotlin("reflect"))
@@ -38,6 +39,7 @@ dependencies {
     shadow("org.mongodb", "bson", bsonVersion)
     shadow("org.mongodb", "mongodb-driver-reactivestreams", reactivestreamsVersion)
     shadow("org.apache.logging.log4j", "log4j-slf4j-impl", log4jVersion)
+    shadow("org.apache.logging.log4j", "log4j-core", log4jVersion)
 }
 
 tasks.withType<KotlinCompile> {
