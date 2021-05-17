@@ -12,7 +12,7 @@ version = "1.0-SNAPSHOT"
 
 val coroutinesVersion = "1.5.0"
 val bsonVersion = "4.2.3"
-val log4jVersion = "2.14.1"
+val log4jVersion = "2.8.1"
 val reactivestreamsVersion = "4.2.3"
 
 repositories {
