@@ -37,8 +37,13 @@ dependencies {
     shadow("org.mongodb", "mongodb-driver-reactivestreams", reactivestreamsVersion)
 }
 
+java {
+    sourceCompatibility = JavaVersion.VERSION_11
+    targetCompatibility = JavaVersion.VERSION_11
+}
+
 tasks.withType<KotlinCompile> {
-    kotlinOptions.jvmTarget = "16"
+    kotlinOptions.jvmTarget = "11"
 }
 
 val shadowJar by tasks.getting(ShadowJar::class) {
