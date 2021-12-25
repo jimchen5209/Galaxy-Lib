@@ -10,9 +10,8 @@ plugins {
 group = "one.oktw"
 version = "1.0-SNAPSHOT"
 
-val coroutinesVersion = "1.5.2"
-val bsonVersion = "4.3.3"
-val reactivestreamsVersion = "4.3.3"
+val coroutinesVersion = "1.6.0"
+val bsonVersion = "4.4.0"
 
 repositories {
     mavenCentral()
@@ -26,7 +25,6 @@ dependencies {
     api("org.jetbrains.kotlinx", "kotlinx-coroutines-jdk8", coroutinesVersion)
     api("org.jetbrains.kotlinx", "kotlinx-coroutines-reactive", coroutinesVersion)
     api("org.mongodb", "bson", bsonVersion)
-    api("org.mongodb", "mongodb-driver-reactivestreams", reactivestreamsVersion)
 
     shadow(kotlin("stdlib-jdk8"))
     shadow(kotlin("reflect"))
@@ -34,7 +32,6 @@ dependencies {
     shadow("org.jetbrains.kotlinx", "kotlinx-coroutines-jdk8", coroutinesVersion)
     shadow("org.jetbrains.kotlinx", "kotlinx-coroutines-reactive", coroutinesVersion)
     shadow("org.mongodb", "bson", bsonVersion)
-    shadow("org.mongodb", "mongodb-driver-reactivestreams", reactivestreamsVersion)
 }
 
 java {
