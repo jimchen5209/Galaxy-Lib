@@ -11,7 +11,7 @@ group = "one.oktw"
 version = "1.0-SNAPSHOT"
 
 val coroutinesVersion = "1.6.0"
-val bsonVersion = "4.4.1"
+val bsonVersion = "4.6.0"
 
 repositories {
     mavenCentral()
