@@ -3,14 +3,14 @@ import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 
 plugins {
     `maven-publish`
-    kotlin("jvm") version "1.6.21"
+    kotlin("jvm") version "1.7.0"
     id("com.github.johnrengelman.shadow") version "7.1.2"
 }
 
 group = "one.oktw"
 version = "1.0-SNAPSHOT"
 
-val coroutinesVersion = "1.6.0"
+val coroutinesVersion = "1.6.3"
 val bsonVersion = "4.6.0"
 
 repositories {
