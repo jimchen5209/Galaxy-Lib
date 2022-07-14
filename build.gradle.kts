@@ -18,7 +18,7 @@ repositories {
 dependencies {
     api(kotlin("stdlib-jdk8"))
     api(kotlin("reflect"))
-    api(platform("org.jetbrains.kotlinx:kotlinx-coroutines-bom:1.6.3"))
+    api(platform("org.jetbrains.kotlinx:kotlinx-coroutines-bom:1.6.4"))
     api("org.jetbrains.kotlinx:kotlinx-coroutines-core")
     api("org.jetbrains.kotlinx:kotlinx-coroutines-jdk8")
     api("org.mongodb:bson:4.6.0")
