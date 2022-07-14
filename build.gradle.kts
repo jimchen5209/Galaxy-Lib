@@ -10,9 +10,6 @@ plugins {
 group = "one.oktw"
 version = "1.0-SNAPSHOT"
 
-val coroutinesVersion = "1.6.3"
-val bsonVersion = "4.6.0"
-
 repositories {
     mavenCentral()
     maven("https://kotlin.bintray.com/kotlinx")
@@ -21,17 +18,10 @@ repositories {
 dependencies {
     api(kotlin("stdlib-jdk8"))
     api(kotlin("reflect"))
-    api("org.jetbrains.kotlinx", "kotlinx-coroutines-core", coroutinesVersion)
-    api("org.jetbrains.kotlinx", "kotlinx-coroutines-jdk8", coroutinesVersion)
-    api("org.jetbrains.kotlinx", "kotlinx-coroutines-reactive", coroutinesVersion)
-    api("org.mongodb", "bson", bsonVersion)
-
-    shadow(kotlin("stdlib-jdk8"))
-    shadow(kotlin("reflect"))
-    shadow("org.jetbrains.kotlinx", "kotlinx-coroutines-core", coroutinesVersion)
-    shadow("org.jetbrains.kotlinx", "kotlinx-coroutines-jdk8", coroutinesVersion)
-    shadow("org.jetbrains.kotlinx", "kotlinx-coroutines-reactive", coroutinesVersion)
-    shadow("org.mongodb", "bson", bsonVersion)
+    api(platform("org.jetbrains.kotlinx:kotlinx-coroutines-bom:1.6.3"))
+    api("org.jetbrains.kotlinx:kotlinx-coroutines-core")
+    api("org.jetbrains.kotlinx:kotlinx-coroutines-jdk8")
+    api("org.mongodb:bson:4.6.0")
 }
 
 java {
