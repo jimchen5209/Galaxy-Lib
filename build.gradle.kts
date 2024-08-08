@@ -4,7 +4,7 @@ import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 plugins {
     `maven-publish`
     kotlin("jvm") version "1.9.24"
-    id("com.github.johnrengelman.shadow") version "8.1.1"
+    id("com.gradleup.shadow") version "8.3.0"
 }
 
 group = "one.oktw"
@@ -24,12 +24,12 @@ dependencies {
 }
 
 java {
-    sourceCompatibility = JavaVersion.VERSION_17
-    targetCompatibility = JavaVersion.VERSION_17
+    sourceCompatibility = JavaVersion.VERSION_21
+    targetCompatibility = JavaVersion.VERSION_21
 }
 
 tasks.withType<KotlinCompile> {
-    kotlinOptions.jvmTarget = "17"
+    kotlinOptions.jvmTarget = "21"
 }
 
 val shadowJar by tasks.getting(ShadowJar::class) {
