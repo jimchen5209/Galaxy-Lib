@@ -20,7 +20,7 @@ dependencies {
     api(kotlin("reflect"))
     api(platform("org.jetbrains.kotlinx:kotlinx-coroutines-bom:1.7.3"))
     api("org.jetbrains.kotlinx:kotlinx-coroutines-core")
-    api("org.mongodb:bson:4.11.1")
+    api("org.mongodb:bson:5.1.3")
 }
 
 java {
